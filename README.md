@@ -1,11 +1,16 @@
 <p align="center">
-	<img src="images/head.gif" width="200" height="200">
+	<a href="https://github.com/monSteRhhe/audio-only-bilibili.js">
+		<img src="images/head.gif" width="200" height="200">
+	</a>
 </p>
 
 <div align="center">
+
 # audio-only-bilibili.js
 
 随便用用~
+
+
 </div>
 参考 [Audio Only bilibili](https://github.com/cyio/audio-only-bilibili) 扩展写的油猴脚本。
 
@@ -17,7 +22,7 @@
 
 再次点击菜单按钮会刷新页面，页面刷新之后就会恢复正常。
 
-[点击安装]()
+[点击安装](https://github.com/monSteRhhe/audio-only-bilibili.js/raw/main/audio-only-bilibili.user.js)
 
 **致谢**
 
