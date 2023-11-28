@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Audio-Only-Bilibili
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  B站视频页使用仅音频模式进行播放
 // @author       monSteRhhe
 // @match        https://www.bilibili.com/video/*
@@ -22,6 +22,14 @@
 
 (function() {
     'use strict';
+
+    /* 直接运行自启动函数获取音频地址的Promise */
+    let audio_promise = (async () => {
+        let _url_info = getURLinfo(),
+            _cid = await getCid(_url_info.bvid, _url_info.page),
+            _audio_src = await getAudioSrc(_url_info.bvid, _cid, 16);
+        return _audio_src
+    })();
 
     let Flag = false; // 用于判断音频模式是否开启
 
@@ -135,11 +143,9 @@
         let bg_style = 'background: url("' + bg_url + '") center center / cover no-repeat transparent; opacity: 0.3;';
         video.style = bg_style;
 
-        let url_info = getURLinfo(),
-            cid = await getCid(url_info.bvid, url_info.page),
-            audio_src = await getAudioSrc(url_info.bvid, cid, 16);
-
-        video.src = audio_src;
+        audio_promise.then(value => {
+            video.src = value;
+        })
     }
 
     /**
