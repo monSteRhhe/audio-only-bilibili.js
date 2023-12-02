@@ -25,7 +25,7 @@
 
 [点击安装](https://github.com/monSteRhhe/audio-only-bilibili.js/raw/main/audio-only-bilibili.user.js)
 
-> 目前仅适用于 AVC 编码的视频。
+> 目前仅适用于B站使用 AVC 编码的视频播放器。
 
 **参考**
 
