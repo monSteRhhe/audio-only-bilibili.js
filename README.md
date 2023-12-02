@@ -27,7 +27,7 @@
 
 > 目前仅适用于 AVC 编码的视频。
 
-**致谢**
+**参考**
 
 [Audio Only bilibili](https://github.com/cyio/audio-only-bilibili)
 
